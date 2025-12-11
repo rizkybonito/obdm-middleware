@@ -2,8 +2,8 @@ import os
 from flask import Flask, jsonify, make_response
 from flask_cors import CORS
 from werkzeug.exceptions import Unauthorized, Forbidden, InternalServerError
-from .config import DevelopmentConfig
-from .routes import api_bp
+from app.config import DevelopmentConfig
+from app.routes import api_bp
 
 def create_app(config_class=DevelopmentConfig):
     app = Flask(__name__)

@@ -4,9 +4,9 @@ from flask import Blueprint, request, jsonify, make_response, current_app
 from werkzeug.exceptions import Unauthorized
 import jwt
 import base64
-from .auth import auth_required, encrypt_password
-from .api_client import fetch_cluster_name, get_api_data, check_upstream_authorization
-from .config import set_cluster_name_in_config
+from app.auth import auth_required, encrypt_password
+from app.api_client import fetch_cluster_name, get_api_data, check_upstream_authorization
+from app.config import set_cluster_name_in_config
 
 api_bp = Blueprint('api', __name__, url_prefix='/api')
 METRICS_MAP = {

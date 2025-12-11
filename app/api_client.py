@@ -2,7 +2,7 @@ import requests
 from flask import current_app
 from werkzeug.exceptions import Unauthorized, Forbidden, InternalServerError
 
-from .auth import get_auth_credentials
+from app.auth import get_auth_credentials
 
 def fetch_cluster_name(username: str, password: str) -> str:
     """Fetches the cluster name """
